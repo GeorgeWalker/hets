@@ -9,4 +9,5 @@ ENV POSTGRESQL_PASSWORD hets
 ENV POSTGRESQL_DATABASE hets
  
 WORKDIR /app/Server/test
+RUN dotnet restore
 RUN dotnet test
