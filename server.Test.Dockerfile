@@ -9,7 +9,7 @@ WORKDIR /app/Server/src/HETSAPI
 RUN dotnet restore
 
 # wipe out the test database
-RUN dotnet ef database drop
+RUN dotnet ef database drop -f
 
 # initialize the test database 
 RUN dotnet ef database update 
