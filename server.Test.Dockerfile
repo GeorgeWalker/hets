@@ -3,7 +3,14 @@ FROM tran-hets-tools/server
  
 ENV ASPNETCORE_ENVIRONMENT Development
 ENV ASPNETCORE_URLS http://*:8080 
- 
+
+
+WORKDIR /app/Server/src/HETSAPI
+# wipe out the test database 
+RUN dotnet ef database drop
+# initialize the test database 
+RUN dotnet ef database update 
+
 WORKDIR /app/Server/test
 RUN dotnet restore
 RUN dotnet test
