@@ -8,5 +8,5 @@ ENV POSTGRESQL_USER hets
 ENV POSTGRESQL_PASSWORD hets
 ENV POSTGRESQL_DATABASE hets
  
-WORKDIR /app/Server/src/HETSAPI/
+WORKDIR /app/Server/test
 RUN dotnet test
