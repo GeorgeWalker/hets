@@ -63,6 +63,7 @@ RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PG
 VOLUME /var/lib/postgresql/data
 
 COPY /Server/test/postgres-docker-entrypoint.sh /usr/local/bin/
+RUN chown -R postgres:postgres '/usr/local/bin/postgres-docker-entrypoint.sh' && chmod 777 '/usr/local/bin/postgres-docker-entrypoint.sh'
 RUN /bin/bash -c '/usr/local/bin/postgres-docker-entrypoint.sh'
 
 USER 999
