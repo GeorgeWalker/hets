@@ -60,6 +60,7 @@ namespace HETSAPI.Models
         DbSet<GroupMembership> GroupMemberships { get; set; }        
         DbSet<History> Historys { get; set; }
         DbSet<ImportMap> ImportMaps { get; set; }
+        DbSet<ImportProgress> ImportProgress { get; set; }
         DbSet<LocalArea> LocalAreas { get; set; }
         DbSet<LocalAreaRotationList> LocalAreaRotationLists { get; set; }
         DbSet<LookupList> LookupLists { get; set; }
@@ -140,6 +141,7 @@ namespace HETSAPI.Models
         public virtual DbSet<GroupMembership> GroupMemberships { get; set; }        
         public virtual DbSet<History> Historys { get; set; }
         public virtual DbSet<ImportMap> ImportMaps { get; set; }
+        public virtual DbSet<ImportProgress> ImportProgress { get; set; }
         public virtual DbSet<LocalArea> LocalAreas { get; set; }
         public virtual DbSet<LocalAreaRotationList> LocalAreaRotationLists { get; set; }
         public virtual DbSet<LookupList> LookupLists { get; set; }

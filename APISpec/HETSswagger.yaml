@@ -7594,6 +7594,28 @@ definitions:
         format: int32
         type: integer
         description: New primary key for record
+  ImportProgress:
+    type: object
+    required:
+      - id
+      - jobIdentifier
+      - stage
+      - position
+    properties:
+      id:
+        format: int32
+        type: integer
+        description: A system generated unique identifier for the ImportProgress record
+      jobIdentifier:
+        type: string
+        description: Job identifier
+      stage:
+        type: string
+        description: Name of the current stage
+      position:
+        format: int32
+        type: integer
+        description: Position within the current stage
   AttachmentViewModel:
     type: object
     x-codegen-viewmodel: true
